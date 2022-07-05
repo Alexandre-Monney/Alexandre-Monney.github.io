@@ -2,7 +2,6 @@ const randomizeButton = function () {
   const button = document.querySelector(".button");
   button.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("click");
     document.querySelector("#pokemon").innerHTML = "";
     drawPokemon();
   });
