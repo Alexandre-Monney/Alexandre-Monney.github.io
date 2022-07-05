@@ -59,3 +59,9 @@ const drawPokemon = async function () {
 };
 
 document.addEventListener("DOMContentLoaded", randomButton);
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  document.querySelector("#pokemon").innerText =
+    "TOUCHE PAS A CA FILS DEEEEEEEE";
+  return false;
+});
