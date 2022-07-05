@@ -77,12 +77,12 @@ body {
     flex-direction: column;
     margin: auto;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
 
 }
 
 #pokemon {
-    width: 100vw;
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
