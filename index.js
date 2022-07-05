@@ -1,4 +1,4 @@
-const randomButton = function () {
+const randomizeButton = function () {
   const button = document.querySelector(".button");
   button.addEventListener("click", (e) => {
     e.preventDefault();
@@ -16,49 +16,52 @@ function getRandomInt(min, max) {
 
 const getPokemon = async function () {
   const pokemonNumber = getRandomInt(1, 151);
+
   const frenchName = await fetch(
     `https://pokeapi.co/api/v2/pokemon-species/${pokemonNumber}`
   );
+
   const result = await fetch(
     `https://pokeapi.co/api/v2/pokemon/${pokemonNumber}`
   );
+
   const frenchNamed = await frenchName.json();
-  const bulb = await result.json();
-  let typesB = [];
-  for (const type of bulb.types) {
-    typesB.push(type.type.name);
+  const poke = await result.json();
+  let types = [];
+  for (const type of poke.types) {
+    types.push(type.type.name);
   }
 
   const info = {
     name: frenchNamed.names[4].name,
-    img: bulb.sprites.other["official-artwork"].front_default,
-    type: typesB,
+    img: poke.sprites.other["official-artwork"].front_default,
+    type: types,
   };
-  //   console.log(bulbIMG);
   return info;
 };
 
 const drawPokemon = async function () {
+  const selectedPokemon = await getPokemon();
+
   const pokemon = document.querySelector("#pokemon");
-  const bulb = await getPokemon();
+
   const h1 = document.createElement("h1");
-  h1.textContent = bulb.name;
   const img = document.createElement("img");
+
+  h1.textContent = selectedPokemon.name;
+  img.src = selectedPokemon.img;
+
   pokemon.appendChild(h1);
-  img.src = bulb.img;
-  //   console.log(bulb.img);
-  //   console.log(bulb);
-  //   console.log(pokemon.style);
-  //   pokemon.style.backgroundImage = `url(${bulb.img})`;
   pokemon.appendChild(img);
-  for (const type of bulb.type) {
+
+  for (const type of selectedPokemon.type) {
     const text = document.createElement("div");
     text.innerText = type;
     pokemon.appendChild(text);
   }
 };
 
-document.addEventListener("DOMContentLoaded", randomButton);
+document.addEventListener("DOMContentLoaded", randomizeButton);
 document.addEventListener("contextmenu", (e) => {
   e.preventDefault();
   document.querySelector("#pokemon").innerText =
