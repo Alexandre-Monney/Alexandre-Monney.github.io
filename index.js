@@ -1,8 +1,11 @@
+let compteur = 0;
+
 const randomizeButton = function () {
   const button = document.querySelector(".button");
   button.addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector("#pokemon").innerHTML = "";
+    compteur++;
     drawPokemon();
   });
 };
@@ -40,9 +43,17 @@ const getPokemon = async function () {
 };
 
 const drawPokemon = async function () {
-  const selectedPokemon = await getPokemon();
-
   const pokemon = document.querySelector("#pokemon");
+
+  if (compteur === 10) {
+    document.querySelector("button").remove();
+    const img = document.createElement("img");
+    img.src = "https://c.tenor.com/9S20D_x97BQAAAAC/dick-cock.gif";
+    pokemon.appendChild(img);
+    return;
+  }
+
+  const selectedPokemon = await getPokemon();
 
   const h1 = document.createElement("h1");
   const img = document.createElement("img");
