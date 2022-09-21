@@ -1,0 +1,41 @@
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.4);
+}
+
+.home-h1, .home-h2 {
+  cursor: default;
+  text-align: center;
+  @media only screen and (min-width: 940px) {
+    text-align: left;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  @media only screen and (min-width: 940px) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+  @media only screen and (min-width: 940px) {
+    font-size: 2rem;
+  }
+}
+
+a {
+  color: #000;
+  transition: color 200ms ease;
+}
+
+a:hover {
+  color: #888;
+  transition: color 200ms ease;
+}
+
+.home-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: default;
+}
