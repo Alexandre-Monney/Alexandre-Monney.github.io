@@ -5,12 +5,12 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 const links = [
   {
-    name: 'Home',
+    name: 'Accueil',
     to: '/',
     // active: 'home'
   },
   {
-    name: 'About Me',
+    name: 'A propos',
     to: '/about',
     // active: 'about'
   },
@@ -21,9 +21,9 @@ const links = [
     // active: 'home'
   },
   {
-    name: 'Portfolio',
+    name: 'Portefolio',
     to: '/portfolio',
-    active: 'portfolio',
+    // active: 'portfolio',
   },
 ];
 
