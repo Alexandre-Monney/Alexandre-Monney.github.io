@@ -23,6 +23,7 @@ function App() {
       flexDirection={'column'}
       justifyContent={'space-between'}
       minHeight={'100vh'}
+      p={'1rem 0.5rem'}
     >
       <Grid item>
         <Navbar changeTheme={switchDarkMode} theme={darkMode} />

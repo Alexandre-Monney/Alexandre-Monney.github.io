@@ -24,7 +24,7 @@ const aboutText = [
 const About = ({ theme }) => {
   return (
     <>
-      <Box display={'flex'} flexDirection={'column'} height={'82vh'} mt={3} p={3}>
+      <Box display={'flex'} flexDirection={'column'} mt={3} p={3}>
         {aboutText.map((p, i) => (
           <Box key={i} width={'70%'} alignSelf={p.flex ? 'end' : null}>
             <p className={theme ? 'dark about-p' : 'about-p'}>{p.text}</p>

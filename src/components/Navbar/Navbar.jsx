@@ -35,7 +35,7 @@ const Navbar = ({ changeTheme, theme }) => {
         display={'flex'}
         justifyContent={'center'}
         alignItems={'center'}
-        gap={{ xs: '2rem', md: '8rem' }}
+        gap={{ xs: '1rem', md: '8rem' }}
         fontSize={'1rem'}
       >
         {links.map((link, index) => (
