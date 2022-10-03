@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link to={link.to}>
               {/* {link.name} */}
               {!link.type && <p style={{ paddingBottom: '0.5rem' }}>{link.name}</p>}
-              {link.type && <h1>{link.name}</h1>}
+              {link.type && <h1 className='nav-title'>{link.name}</h1>}
             </Link>
           </Box>
         ))}

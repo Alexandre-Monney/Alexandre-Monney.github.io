@@ -1,0 +1,13 @@
+.about-p {
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    transition: all 250ms ease;
+    cursor: pointer;
+          
+        &:hover {
+            transform: translateY(-3px);
+            transition: all 250ms ease;
+        }
+}
+    
