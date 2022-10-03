@@ -1,5 +1,6 @@
 import { Paper } from '@mui/material';
 import { Box } from '@mui/system';
+import Footer from '../Footer/Footer';
 import './style.scss';
 
 const About = () => {
@@ -26,13 +27,17 @@ const About = () => {
   );
 
   return (
-    <Box display={'flex'} flexDirection={'column'} mt={3} p={3}>
-      <Box width={'70%'}>{firstText()}</Box>
-      <Box width={'70%'} alignSelf={'end'}>
-        {tech()}
+    <>
+      <Box display={'flex'} flexDirection={'column'} height={'82vh'} mt={3} p={3}>
+        <Box width={'70%'}>{firstText()}</Box>
+        <Box width={'70%'} alignSelf={'end'}>
+          {tech()}
+        </Box>
+        <Box width={'70%'}>{softSkills()}</Box>
       </Box>
-      <Box width={'70%'}>{softSkills()}</Box>
-    </Box>
+
+      <Footer />
+    </>
   );
 };
 export default About;

@@ -5,6 +5,7 @@ import radiologyQuestionImg from '../../assets/rq.png';
 import amicalFootballImg from '../../assets/af.png';
 import porteFolioImg from '../../assets/pf.png';
 import todoAppImg from '../../assets/av.png';
+import Footer from '../Footer/Footer';
 
 const projectList = [
   {
@@ -39,15 +40,19 @@ const projectList = [
 
 const Portfolio = () => {
   return (
-    <Box>
-      <Grid container display={'flex'} justifyContent={'center'}>
-        {projectList.map((item) => (
-          <Grid item xs={12} md={6} key={item.id}>
-            <ItemProject image={item.image} title={item.title} live={item.live} source={item.source} />
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
+    <>
+      <Box>
+        <Grid container display={'flex'} justifyContent={'center'}>
+          {projectList.map((item) => (
+            <Grid item xs={12} md={6} key={item.id}>
+              <ItemProject image={item.image} title={item.title} live={item.live} source={item.source} />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+
+      <Footer />
+    </>
   );
 };
 export default Portfolio;

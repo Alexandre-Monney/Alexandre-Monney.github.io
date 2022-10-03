@@ -5,7 +5,7 @@ import './style.scss';
 
 const ItemProject = ({ image, title, live, source }) => {
   return (
-    <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+    <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} maxHeight={'100%'}>
       <Box className='project-img' component={'img'} src={image} alt={'project preview'} />
       <h1 style={{ fontSize: '2rem' }}>{title}</h1>
       <Box
