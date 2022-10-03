@@ -1,6 +1,7 @@
 import { Box, Grid } from '@mui/material';
 import './style.scss';
-import picture from '../../assets/avatarAlex.jpg';
+// import picture from '../../assets/avatarAlex.jpg';
+import picture from '../../assets/avatarCircle.png';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Footer from '../Footer/Footer';
