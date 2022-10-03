@@ -1,34 +1,38 @@
 import { Box } from '@mui/material';
 import './style.scss';
-import picture from '../../assets/avatar.png';
+import picture from '../../assets/avatarAlex.jpg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const info = {
   desc: [
     {
-      text: 'Lorem ipsum dolor sit amet consectetur.',
+      icon: '⚛️',
+      text: 'Spécialisé Front - React & Redux',
     },
     {
-      text: 'Lorem ipsum dolor sit amet.',
+      icon: '🏠',
+      text: "Habitant de Seine & Marne, dispo pour toute l'IDF",
     },
     {
-      text: 'Lorem, ipsum dolor sit amet consectetur adipisicing.',
+      icon: '📝',
+      text: 'Disponible des maintenant (CDI/CDD)',
     },
     {
-      text: 'Lorem ipsum dolor sit amet consectetur.',
+      icon: '📧',
+      text: 'alexandre.monney@laposte.net',
     },
   ],
   socials: [
     {
       label: 'linkedin',
       icon: <LinkedInIcon sx={{ fontSize: 50 }} />,
-      link: '',
+      link: 'https://www.linkedin.com/in/alexandre-monney/',
     },
     {
       label: 'github',
       icon: <GitHubIcon sx={{ fontSize: 45 }} />,
-      link: '',
+      link: 'https://github.com/Alexandre-Monney',
     },
   ],
 };
@@ -52,7 +56,7 @@ const Home = () => {
         height={{ xs: '35vh', md: '40vh' }}
         borderRadius={'50%'}
         p={'0.75rem'}
-        mb={{ xs: '1rem', sm: 0 }}
+        mb={{ xs: '1rem', sm: '1rem' }}
         mr={{ xs: 0, md: '2rem' }}
       />
       <Box>
@@ -64,7 +68,7 @@ const Home = () => {
         <Box component={'ul'} p={'0.8rem'}>
           {info.desc.map((item, index) => (
             <li className='home-desc' key={index}>
-              {item.text}
+              {item.icon} {item.text}
             </li>
           ))}
         </Box>

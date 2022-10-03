@@ -1,20 +1,39 @@
 import { Box, Grid } from '@mui/material';
 import ItemProject from './ItemProject';
 
+import radiologyQuestionImg from '../../assets/rq.png';
+import amicalFootballImg from '../../assets/af.png';
+import porteFolioImg from '../../assets/pf.png';
+import todoAppImg from '../../assets/av.png';
+
 const projectList = [
   {
     id: 1,
-    title: 'Project 1',
-    live: 'https://alexandre-monney.github.io/',
+    title: 'Mon PorteFolio',
+    live: 'https://alexandre-monney.surge.sh/',
     source: 'https://github.com/Alexandre-Monney/Alexandre-Monney.github.io',
-    image: 'img example',
+    image: porteFolioImg,
   },
   {
     id: 2,
-    title: 'Project 1',
-    live: 'https://alexandre-monney.github.io/',
+    title: 'Radiology Questions',
+    live: 'https://radiology-questions.surge.sh/',
+    source: 'https://github.com/Alexandre-Monney/radiology-questions',
+    image: radiologyQuestionImg,
+  },
+  {
+    id: 3,
+    title: 'Amical Football',
+    live: 'https://amical-football.surge.sh/',
     source: 'https://github.com/Alexandre-Monney/Alexandre-Monney.github.io',
-    image: 'img example',
+    image: amicalFootballImg,
+  },
+  {
+    id: 4,
+    title: 'Todo App',
+    live: 'https://alexandre-monney.surge.sh/',
+    source: 'https://github.com/Alexandre-Monney/Alexandre-Monney.github.io',
+    image: todoAppImg,
   },
 ];
 
