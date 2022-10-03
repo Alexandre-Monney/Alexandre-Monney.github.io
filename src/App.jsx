@@ -1,23 +1,37 @@
-import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import { Route, Routes } from 'react-router-dom';
 import Portfolio from './components/Portfolio/Portfolio';
 import { Grid } from '@mui/material';
-import Footer from './components/Footer/Footer';
 import About from './components/About/About';
+import { useState } from 'react';
+import './App.css';
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const switchDarkMode = () => {
+    setDarkMode(!darkMode);
+    console.log(darkMode);
+  };
+
   return (
-    <Grid container display={'flex'} flexDirection={'column'} justifyContent={'space-between'} minHeight={'95vh'}>
+    <Grid
+      className={darkMode ? 'dark-mode' : 'light-mode'}
+      container
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={'space-between'}
+      minHeight={'100vh'}
+    >
       <Grid item>
-        <Navbar />
+        <Navbar changeTheme={switchDarkMode} theme={darkMode} />
       </Grid>
       <Grid item flexGrow={1}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/portfolio' element={<Portfolio />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/about' element={<About theme={darkMode} />} />
         </Routes>
       </Grid>
     </Grid>

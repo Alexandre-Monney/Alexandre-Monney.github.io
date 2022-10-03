@@ -27,9 +27,9 @@ const links = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ changeTheme, theme }) => {
   return (
-    <Box component={'nav'} width={'100%'}>
+    <Box component={'nav'} width={'100%'} pr={'1rem'}>
       <Box
         component={'ul'}
         display={'flex'}
@@ -41,14 +41,14 @@ const Navbar = () => {
         {links.map((link, index) => (
           <Box key={index} component={'li'} className={''}>
             <Link to={link.to}>
-              {/* {link.name} */}
               {!link.type && <p style={{ paddingBottom: '0.5rem' }}>{link.name}</p>}
               {link.type && <h1 className='nav-title'>{link.name}</h1>}
             </Link>
           </Box>
         ))}
-        <li>
-          <DarkModeIcon />
+        <li onClick={changeTheme}>
+          {theme ? <span className='theme-img'>🌕</span> : <span className='theme-img'>🌑</span>}
+          {/* <DarkModeIcon /> */}
         </li>
       </Box>
     </Box>
